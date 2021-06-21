@@ -1,0 +1,33 @@
+header h1{
+    width: 100%;
+    text-align: center;
+     color: green;
+     background-color: black;
+     height: 50px;
+     font-size: 55px;
+    }
+
+article{
+    border: 2px solid blue;
+    margin-top: 15px;
+    margin-left: 15px;
+    display: inline-block;
+}
+img{
+    float: left;
+    width: 500px;
+    height:350px;
+
+}
+p{
+    float: right;
+    width: 500px;
+    height:350px;
+}
+
+section{
+    clear: both;
+}
+footer{
+    border: 2px solid blue;
+}
