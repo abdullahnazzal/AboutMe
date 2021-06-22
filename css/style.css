@@ -13,6 +13,31 @@ article{
     margin-left: 15px;
     display: inline-block;
 }
+#topten{
+    border: 2px solid blue;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-size: 55px;
+}
+h2{
+    text-align: center;
+}
+ol{
+    color: blue;
+    list-style-type:decimal-leading-zero;
+    padding:100px;
+
+
+}
+ul{
+    color: blue;
+    list-style-type:disc;
+    padding:100px;
+
+
+}
+
+  
 img{
     float: left;
     width: 500px;

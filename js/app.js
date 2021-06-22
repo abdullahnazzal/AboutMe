@@ -2,6 +2,9 @@
 
 let userName;
 let total=1;
+let number = 5;
+let number2 = [1, 4, 9, 5, 7];
+//let tota2 = 0;
 let flag1=true;
 let flag2=true;
 
@@ -106,6 +109,67 @@ function questionAge(){
     }
   
   }
+  function questionguest1() {
+
+    alert("Now you have to guess number, plz enter number between 1-10, You have just 4 time");
+    for (let i = 0; i < 4; i++) {
+        let time = 0;
+        if (time !== 4) {
+            let num = prompt("Plz guess a number ");
+            if (num < 5) {
+                alert(" too low ");
+                time++;
+                continue;
+            } else if (num > 5) {
+                alert(" too high ");
+                time++;
+                continue;
+            } else if (num == 5) {
+                alert(" Congratulations the guess right ");
+                total++;
+                break;
+
+            }
+        } else {
+            alert(" Oh you waste the 4 guess  ");
+        }
+    }
+}
+function questionguest2() {
+  let flag = true;
+  let answer11=false;
+  alert("Now you have to guess number, plz enter number between 1-10, You have just 6 time");
+  for (let i = 0; i < 6; i++) {
+      if (flag == true) {
+          if(answer11==false){
+              let num = prompt("Plz guess a number ");
+          for (let j = 0; j < 6; j++) {
+              if (num == number2[j]) {
+                  alert(" Congratulations the guess right ");
+                  total++;
+                  flag = false;
+                  answer11=true;
+                  break;
+
+              } else {
+                  continue;
+
+              }
+          }
+          }
+          else{
+              alert(" Oh you guess wrong, plz try again");
+          }
+          
+      }
+      else {
+          break;
+      }
+  }
+
+}
+
+
 
 //   function again1(){
 //     if(total==5){
@@ -123,11 +187,13 @@ function questionAge(){
             questionUniversity();
             questionMajore();
             questionHobbies();
-            if(total==6){
-               alert("Congratulations, You answer 5 of 5 question");
+            questionguest1();
+            questionguest2();
+            if(total>5){
+               alert("Congratulations, You answer "+total +"of 8 question");
                break;
             }else{
-              flag2 =confirm("Oh No, you got answer "+ --total +" of 5 question, Would you like to play again");
+              flag2 =confirm("Oh No, you got answer "+ --total +" of 8 question, Would you like to play again");
             }
         }while(flag2==true);
 
